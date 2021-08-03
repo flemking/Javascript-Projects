@@ -12,3 +12,9 @@ inputs.forEach(input => input.addEventListener('mouseover', handleChange))
 
 
 //TODO: Implement the download button
+// function downloadImage() {
+//     html2canvas(document.querySelector("#image")).then(canvas => {
+//         console.log(canvas.toDataURL("image/jpeg", 0.9))
+//     });
+// }
+// document.getElementById('download').addEventListener('click', console.log('hi'));
