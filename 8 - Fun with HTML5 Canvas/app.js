@@ -1,5 +1,5 @@
-const canvas = document.querySelector('#draw')
-const ctx = canvas.getContext('2d')
+const canvas = document.querySelector('#draw');
+const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -20,7 +20,7 @@ const draw = (e) => {
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(e.offsetX, e.offsetY);
     ctx.stroke();
-    [lastX, lastY] = [e.offsetX, e.offsetY]
+    [lastX, lastY] = [e.offsetX, e.offsetY];
 }
 
 canvas.addEventListener('mousedown', (e) => {
@@ -28,6 +28,6 @@ canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
     [lastX, lastY] = [e.offsetX, e.offsetY];
   })
-canvas.addEventListener('mousemouve', draw)
+canvas.addEventListener('mousemove', draw)
 canvas.addEventListener('mouseup', () => isDrawing = false)
 canvas.addEventListener('mouseout', () => isDrawing = false)
